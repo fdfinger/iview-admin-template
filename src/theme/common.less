@@ -1,0 +1,197 @@
+@import '~iview/src/styles/index.less';
+// Here are the variables to cover, such as:
+@font-family            : "Microsoft YaHei","微软雅黑",Arial,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB",sans-serif;
+@btn-border-radius      : 3px;
+@btn-border-radius-small: 2px;
+@btn-group-border       : shade(@primary-color, 10%);
+@primary-color          : #616fe5;
+@info-color             : #7793f0;
+@error-color            : #e9417f;
+@warning-color          : #efa95e;
+@layout-header-background      : #5CB95B;
+// 私有变量
+@table-background-color: #f0f4ff;
+@table-border-color: #e4e8ff;
+.ivu-modal-wrap::-webkit-scrollbar {
+  width:0px;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background-color:#F2F2F2;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius:2em;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cdd5ec;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius:2em;
+}
+.ivu-loading-bar-inner-color-primary {background-color: #FFF;}
+.ivu-cascader-menu .ivu-cascader-menu-item i{
+  right:10px;
+  margin-top:-5px;
+}
+.ivu-transfer-operation .ivu-btn span i {vertical-align:-3px}
+.ivu-transfer-operation .ivu-btn > span {vertical-align:0}
+.ivu-btn-small {padding:1px 7px 3px}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.form-label {
+  text-align:right;
+  padding-top:8px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+  th {
+    padding:5px;
+    border:1px solid @table-border-color;
+    background: @table-background-color;
+  }
+  td {
+    padding:5px;
+    border:1px solid @table-border-color;
+    .ivu-checkbox-wrapper {
+      margin-right:0
+    }
+  }
+  tr.header {
+    background: @table-background-color;
+    font-weight:bold;
+  }
+  tr.selected td,td.selected {
+    background: rgba(46, 152, 255, 0.18);
+  }
+  td.center {
+    text-align:center;
+    input {text-align:center;}
+  }
+  td.right {
+    text-align:right;
+  }
+}
+.table.hover {
+  tbody tr:hover {
+    background: #f6ffff;
+  }
+}
+.table.hover-shadow:hover {
+  box-shadow:0 2px 3px rgba(0,0,0,0.1)
+}
+.table.order-table {
+  border:2px solid @table-border-color
+}
+
+.table.padding-10,.table>tr.padding-10 {
+  th,td {
+    padding:10px 15px;
+  }
+  td.td-thin {
+    padding:0;
+    .table-thin {
+      width:calc(~"100% + 2px");
+      margin:-1px -1px 0 -1px;
+      td {
+        padding:5px 10px;
+        font-size:12px;
+      }
+    }
+  }
+}
+.table-thin {
+  width:100%;
+  border-collapse:collapse;
+  font-size:12px;
+  td {
+    padding:5px;
+    font-size:12px;
+  }
+}
+.table ~ .table {margin-top:15px;}
+.no-data {
+  border:2px solid @table-border-color;
+  padding:50px 0;line-height:40px;text-align:center;
+  .ivu-icon {color:rgba(46, 152, 255, 0.18)}
+}
+.hide-checkbox-label {
+  .ivu-checkbox-wrapper + span, .ivu-checkbox + span {display:none}
+}
+.search-bar {
+  padding:0 0 20px 0;
+  border-bottom:1px solid #EDEDED;
+  color:#666;
+  .title {
+    padding-bottom:5px;
+    font-size:12px
+  }
+  .search-buttons {
+    padding-top:22px;
+    display:flex;
+    button {
+      margin-right:10px;
+    }
+  }
+}
+.list-tabs {
+  margin-top:15px;
+  .ivu-tabs {
+    margin-bottom:-15px;
+  }
+}
+.list-buttons-bar {
+  margin:10px 12px;display:flex;justify-content: space-between;align-items: center;
+  input {text-align:center}
+}
+.list-buttons-bar.no-margin {margin:10px 0;}
+
+.padder(@l:0px,@t:0px,@r:0px,@b:0px) {
+  padding-left: @l;
+  padding-top: @t;
+  padding-right: @r;
+  padding-bottom: @b;
+}
+.padder-r-5 {
+  .padder(@r:5px)
+}
+.padder-5 {
+  .padder(@l:5px,@t:5px,@r:5px,@b:5px)
+}
+
+.text-primary {font-size:14px;color:#000;}
+.text-desc {font-size:12px;color:#999;}
+// .tip-card {
+//   width: 260px;
+//   padding: 10px;
+//   .header {
+//     display: flex;
+//     justify-content: space-between;
+//     color:#999;
+//     line-height:200%;
+//     strong {
+//       font-size:16px;
+//       color:#333
+//     }
+//   }
+//   .item {
+//     padding-top:10px
+//   }
+//   .other {
+//     text-align:center;
+//     margin-top:15px;
+//   }
+// }

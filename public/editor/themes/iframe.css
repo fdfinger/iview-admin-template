@@ -1,0 +1,14 @@
+/*可以在这里添加你自己的css*/
+html {
+    background:#F8F8F8;
+    height:100%;
+}
+body {
+    max-width:750px;
+    background:#FFF;
+    padding:0 10px;
+    margin:10px auto;
+}
+img {
+    max-width:100%;
+}
